@@ -1,0 +1,66 @@
+/*
+  Специально для светлой темы при наличии класса.
+  Здесь окажутся стили, которые нужно переопределить принудительно,
+  переключая тему
+*/
+
+:root.theme-light {
+    --bg-primary: #FFF1F7 ;
+    --accent-color: #FF8DCB;
+    --accent-color-rgb: 255, 141, 203;
+    --accent-color-btn-rgb: 53, 52, 48;
+
+    --text-title: #FFC2E6;
+    --text-primary: #353430;
+    --text-secondary: #353430;
+
+    --bg-img: url("../images/cover-image-light.png");
+
+}
+
+.theme-light .page {
+  /* Вам также нужно будет написать ряд подобных селекторов */
+}
+.theme-light .header::before,
+.theme-light .footer::before {
+    border-right: 1px solid var(--text-primary);
+    border-top: 1px solid var(--text-primary);
+}
+.theme-light .header::after,
+.theme-light .footer::after {
+    border-bottom: 1px solid var(--text-primary);
+    border-left: 1px solid var(--text-primary);
+}
+.theme-light .rec {
+    display: none;
+}
+
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-primary: #FFF1F7 ;
+        --accent-color: #FF8DCB;
+        --accent-color-rgb: 255, 141, 203;
+        --accent-color-btn-rgb: 53, 52, 48;
+
+        --text-title: #FFC2E6;
+        --text-primary: #353430;
+        --text-secondary: #353430;
+
+        --bg-img: url("../images/cover-image-light.png");
+    }
+    .header::before,
+    .footer::before {
+        border-right: 1px solid var(--text-primary);
+        border-top: 1px solid var(--text-primary);
+    }
+    .header::after,
+    .footer::after {
+        border-bottom: 1px solid var(--text-primary);
+        border-left: 1px solid var(--text-primary);
+    }
+    .rec {
+        display: none;
+    }
+
+}
