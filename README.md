@@ -1,1 +1,1 @@
-https://github.com/kenniele/slozhno-sosredatochitsiya
+https://github.com/username/slozhno-sosredotochitsya-ad
